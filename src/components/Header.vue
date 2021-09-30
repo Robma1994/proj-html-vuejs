@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="containerHeader">
+    <header class="containerHeader">
       <div class="logo">
         <!-- LOGO -->
         <h1>pippo</h1>
@@ -9,10 +9,7 @@
         <h1>poppo</h1>
         <!-- <li> -->
       </div>
-    </div>
-      
-   
-    
+    </header>
   </div>
 </template>
 

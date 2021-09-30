@@ -3,12 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+//container
+
 .container-small {
     width: 1030px;
     margin: 0 auto;
 }
+//FINE CONTAINER
+//Height
+.height728 {
+    height: 728px;
+}
+.height300 {
+    height: 300px;
+}
+.heightBanner {
+    height: calc(100% - 190px);
+}
+//FINE HEIGHT
 
+//Centrature
 .verticalCentering {
     display: flex;
     align-items: center;
+}
+.verOriCentering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dirCol {
+    flex-direction: column;
+}
+//Centratura testo
+.textCenter{
+    text-align: center;
 }
