@@ -11,16 +11,30 @@
 }
 //FINE CONTAINER
 //Height
-.height728 {
-    height: 728px;
+.height100{
+    height: 100%;
+}
+.height200 {
+    height: 200px;
+    background-color: gray;
 }
 .height300 {
     height: 300px;
+}
+.height350 {
+    height: 350px;
+}
+.height728 {
+    height: 728px;
 }
 .heightBanner {
     height: calc(100% - 190px);
 }
 //FINE HEIGHT
+//Larghezze
+.width300 {
+    width: 300px;
+}
 
 //Centrature
 .verticalCentering {
@@ -38,4 +52,11 @@
 //Centratura testo
 .textCenter{
     text-align: center;
+}
+//Margini 
+.marginL10{
+    margin-left: 10px;
+}
+.marginR10{
+    margin-right: 10px;
 }

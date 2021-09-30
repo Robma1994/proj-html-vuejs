@@ -10,7 +10,7 @@
     </div>
 <!-- Blocco due - World Class Fitness -->
     <div class="container height300">
-      <div class="container-small height300 verOriCentering">
+      <div class="container-small height100 verOriCentering">
         <div class="verOriCentering dirCol">
           <h2>World Class Fitness</h2>
           <h3>Ciao pippo</h3>
@@ -20,8 +20,19 @@
     </div>
 <!-- Fine Blocco due - World Class Fitness -->
 <!-- Blocco Tre - -->    
-    <div>
-
+    <div class="container height350">
+      <div class="container-small height100">
+        <!-- Inserendo contenuto posso eliminare le altezze fisse e rendere il tutto dinamico -->
+        
+        <div class="verOriCentering height350"> <!-- Utilizzando flex con un div mancante, avrei perso elasticità-->
+          <div class="height200 width300 marginR10">
+            <!-- immagine -->
+          </div>
+          <div class="height200 width300 marginL10">
+            <!-- Form -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
