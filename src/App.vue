@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <div class="container height728">
+    <div class="background container height728">
       <Header />
-      <div class="container-small heightBanner">
-        <h1>NO PAIN NO GAIN</h1>
-        <p>laaaaa</p>
-        <button>Join us today</button>
+      <div class="container-small heightBanner orizzontalCentering">
+        <div class="container-Title">
+          <h1 class="title">NO PAIN NO GAIN</h1>
+          <p>Motivation is what gets you started. Habit is what keeps you going </p>
+          <button>Join us today</button>
+        </div>
       </div>
     </div>
 <!-- Blocco due - World Class Fitness -->
@@ -19,7 +21,7 @@
       </div>
     </div>
 <!-- Fine Blocco due - World Class Fitness -->
-<!-- Blocco Tre - -->    
+<!-- Blocco Tre - Form -->    
     <div class="container height350">
       <div class="container-small height100">
         <!-- Inserendo contenuto posso eliminare le altezze fisse e rendere il tutto dinamico -->
@@ -34,6 +36,8 @@
         </div>
       </div>
     </div>
+<!-- Fine Blocco Tre - Form -->    
+
   </div>
 </template>
 
@@ -50,18 +54,39 @@ export default {
 
 <style lang="scss">
 @import './style/generals';
-  //background-image: url('assets/home-banner.jpg');
-  //background-size: cover;
+@import './style/variables';
+
+.background {
+  background-image: url('assets/home-banner.jpg');
+  background-size: cover;
+}
 .container {
   width: 100%;
-  background-color: orange;
-  border: 1px solid black;
 }
 .container-small {
-  background-color: blue;
-  border: 1px solid black;
+  //background-color: rgba($color: blue, $alpha: 0.3);
+  //border: 1px solid black;
+}
+.title {
+  font-size: $fontSize65;
+  color: $colorWhite;
 }
 
+.container-Title {
+  margin-top: 75px;
+  color: $colorWhite;
+  text-align: center;
 
-
+    p {
+      font-size: 16px;
+      color: lightgray;
+      padding: 15px 15px
+    }
+    button {
+      border: 1px solid gray; 
+      padding: 5px 5px 5px 5px;
+      background-color: inherit;
+      color: gray;
+    }
+}
 </style>

@@ -28,7 +28,7 @@
     height: 728px;
 }
 .heightBanner {
-    height: calc(100% - 190px);
+    height: calc(100% - 240px);
 }
 //FINE HEIGHT
 //Larghezze
@@ -40,6 +40,10 @@
 .verticalCentering {
     display: flex;
     align-items: center;
+}
+.orizzontalCentering {
+    display: flex;
+    justify-content: center;
 }
 .verOriCentering {
     display: flex;
