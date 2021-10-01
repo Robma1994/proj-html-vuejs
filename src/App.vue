@@ -36,18 +36,31 @@
         </div>
       </div>
     </div>
-<!-- Fine Blocco Tre - Form -->    
-
+<!-- Fine Blocco Tre - Form -->  
+    <div class="container backgroundShark">
+      <div class="container-small wrapper">
+        <FooterTop />
+      </div>
+    </div>  
+    <div class="container height110 backgroundLightBlack">
+      <div class="container-small height100">
+        <FooterBottom />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import FooterTop from './components/FooterTop.vue'
+import FooterBottom from './components/FooterBottom.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    FooterTop,
+    FooterBottom
   }
 }
 </script>
@@ -88,5 +101,11 @@ export default {
       background-color: inherit;
       color: gray;
     }
+}
+.backgroundShark {
+    background-color: $backgroundShark;
+}
+.backgroundLightBlack {
+  background-color: $colorLightBlack;
 }
 </style>

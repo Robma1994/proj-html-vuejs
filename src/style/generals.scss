@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-//container
+//FontAwesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+//Fine FontAwesome
 
+
+//container
 .container-small {
     width: 1030px;
     margin: 0 auto;
@@ -14,9 +18,11 @@
 .height100{
     height: 100%;
 }
+.height110{
+    height: 110px;
+}
 .height200 {
     height: 200px;
-    background-color: gray;
 }
 .height300 {
     height: 300px;
@@ -35,7 +41,10 @@
 .width300 {
     width: 300px;
 }
-
+//Disposizioni
+.orizzontal {
+    display: flex;
+}
 //Centrature
 .verticalCentering {
     display: flex;
@@ -63,4 +72,7 @@
 }
 .marginR10{
     margin-right: 10px;
+}
+.marginR5{
+    margin-right: 5px;
 }
