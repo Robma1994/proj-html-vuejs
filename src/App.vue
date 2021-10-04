@@ -287,6 +287,7 @@ export default {
   padding: 100px 0 100px 0;
   .container-small {
     display: flex;
+    width: 60%;
     .wrapper-Activities {
       //width: calc(100% / 4);
       display: flex;
@@ -322,7 +323,7 @@ export default {
 
     .container-small-real-world {
       //height: 100%;
-      width: 80%;
+      width: 60%;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -340,7 +341,7 @@ export default {
             .wrapper-card-testimonial {
               display: flex;
               background-color: $backgroundDarkGray;
-              width: 480px;
+              width: 420px;
               margin: 10px;
 
                 .wrapper-name{
@@ -493,7 +494,7 @@ padding: 100px 120px 100px 120px;
   width: 100%;
   padding: 50px 50px;
     .container-small-news{
-      width: 80%;
+      width: 60%;
       margin: 0 auto;
       .container-s-news-top {
         display: flex;
@@ -511,6 +512,14 @@ padding: 100px 120px 100px 120px;
                 background-color: $backgroundDarkGray;
                 margin: 10px 10px 10px 10px;
                 width: 200px;
+                height: 100%;
+
+                  .cont-s-n-bot-top {
+
+                  }
+                  .cont-s-n-bot-bot {
+                    padding: 15px 15px 15px 15px;
+                  }
               }
           }
       }
