@@ -5,6 +5,7 @@ export let news =
         title: 'Train with free weights or your body weight?',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, consequatur, architecto aliquid itaque'
     },
+    
     {
         img: 'blog6-200x200.jpg',
         title: 'Nutritional advice that will keep your training',

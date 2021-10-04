@@ -17,5 +17,5 @@ export let immaginiPerfomance =
         },
         {
             immagine: 'image6-200x135'
-        },
+        }
     ]

@@ -116,15 +116,15 @@
           <div class="wrapper-card-trainer">
             <div class="card-trainer backgroundShark" v-for="(train, index) in trainers" :key="index">
               <img :src="require(`./assets/trainer-${train.img}.jpg`)" alt="">
-              <div>
-                <div>
+              <div class="card-trainer-bottom">
+                <div class="card-trainer-title">
                   <h3>{{train.title}}</h3>
                   <h4>{{train.subTitle}}</h4>
                 </div>
-                <div>
+                <div class="card-trainer-des">
                   <p>{{train.description}}</p>
                 </div>
-                <div>
+                <div class="card-trainer-social">
                   <i :class="`fab ${train.facebook}`"></i>
                   <i :class="`fab ${train.twitter}`"></i>
                   <i :class="`fab ${train.instagram}`"></i>
@@ -132,7 +132,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="btn-trainers">
             <button>VIEW ALL TRAINERS</button>
           </div>
         </div>
@@ -429,20 +429,59 @@ padding: 100px 120px 100px 120px;
   width: 100%;
 
     .container-small-trainers {
-      width: 80%;
+      width: 60%;
       margin: 0 auto;
-      padding-top: 50px;
+      padding: 50px 50px;
+        .container-s-trainers-top {
+          h2 {
+            color: $colorWhite;
+          }
+        } 
         .container-s-trainers-bottom {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding-bottom: 50px;
             .wrapper-card-trainer {
               display: flex;
                 .card-trainer {
                 height: 310px;
-                margin: 5px 10px 5px 10px
+                margin: 5px 10px 5px 10px;
+                  .card-trainer-bottom {
+                    padding: 18px 0 18px 18px;
+                      .card-trainer-title{
+                        width: 175px;
+                          h3, h4{
+                            color: $colorWhite;
+                            font-size: $fontSize13;
+                            line-height: 16px;
+                          }
+                      }
+                      .card-trainer-des {
+                        width: 175px;
+                          p{
+                            padding: 10px 0 10px;
+                            color: $colorDoveGray;
+                            font-size: $fontSize13;
+                            line-height: 16px;
+                          } 
+                      }
+                      .card-trainer-social {
+                        width: 175px;
+                          i {
+                            margin-right: 8px;
+                            color: $colorWhite;
+                          }
+                      }
+                  }
               }
+            }
+            .btn-trainers{
+              padding-top: 50px; 
+                button {
+                  padding: 10px 10px 10px 10px;
+                  background-color: inherit;
+                  color: $colorDoveGray;
+                }
             } 
         }
     }
@@ -450,7 +489,9 @@ padding: 100px 120px 100px 120px;
 //FINE
 //CONTAINER NEWS 
 .container-news {
+  background-color: $backgroundShark;
   width: 100%;
+  padding: 50px 50px;
     .container-small-news{
       width: 80%;
       margin: 0 auto;
@@ -463,9 +504,11 @@ padding: 100px 120px 100px 120px;
 
           .wrapper-card-news {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
 
               .card-news {
+                background-color: $backgroundDarkGray;
                 margin: 10px 10px 10px 10px;
                 width: 200px;
               }
