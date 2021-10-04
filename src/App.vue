@@ -13,10 +13,10 @@
 <!-- Blocco due - World Class Fitness -->
     <div class="container height300 backgroundLightGray">
       <div class="container-small height100 verOriCentering">
-        <div class="verOriCentering dirCol">
+        <div class="container-small-fitness-top verOriCentering dirCol">
           <h2 class="marginB10">World Class Fitness</h2>
-          <img class="marginB10" src="./assets/divider-x-red.png" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi odit in itaque reprehenderit. Voluptatibus animi deus sed?</p>
+          <img class="marginB10" src="./assets/divider-xx-red.png" alt="">
+          <p class="textC">At Avada Gym, everything we do from top to bottom is of the highest quality to ensure we're equipped to help you reach your goals of a healthy and fit lifestyle</p>
         </div>
       </div>
     </div>
@@ -44,8 +44,8 @@
     </div>
 <!-- Fine Blocco Tre - Form -->  
 <!-- Activities -->
-    <div class="backActivities height350">
-      <div class="container-small height100">
+    <div class="backActivities">
+      <div class="container-small">
         <div class="wrapper-Activities" v-for="(activ,index) in activity" :key="index"> 
           <div class="cycleIcon verOriCentering marginB10">
             <i class="largeIcon" :class="`fas ${activ.icon}`"></i>
@@ -65,11 +65,11 @@
           <img class="marginB10" src="./assets/divider-xx-red.png" alt="">
         </div>
         <div class="wrapper-testimonials">
-          <div class="wrapper-card-tesimonial" v-for="(testim, index) in testimonial" :key="index">
-            <div class="paddingTop25 paddingBottom25 paddingLeft25 paddingRight25">
+          <div class="wrapper-card-testimonial" v-for="(testim, index) in testimonial" :key="index">
+            <div class="wrapper-img paddingTop20 paddingBottom20 paddingLeft20 paddingRight20">
               <img class="height110" :src="require(`./assets/compressor-${testim.img}`)" alt="">
             </div>
-            <div class="paddingBottom25 paddingTop25">
+            <div class="wrapper-name paddingBottom20 paddingTop20">
               <p>{{testim.descrition}}</p>
               <h4>{{testim.name}}</h4>
             </div>
@@ -159,6 +159,13 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+<!-- FINE -->
+<!-- Sezione Goal -->
+    <div class="container-goal">
+      <div class="container-small-goal">
+
       </div>
     </div>
 <!-- FINE -->
@@ -257,9 +264,9 @@ export default {
 .container {
   background-color: $backgroundDarkGray;
   .container-small {
+    
     .verOriCentering {
       .height200 {
-
           img {
             width: 100%;
           }
@@ -267,13 +274,17 @@ export default {
     }
   }
 }
+//FINE
+
 //SEZIONE FORM
+
 //FINE SEZIONE FORM
 
 //SEZIONE ACTIVITIES
 .backActivities {
   background-image: url('./assets/gym_bkgd_bw-compressor.jpg');
   background-position: center;
+  padding: 100px 0 100px 0;
   .container-small {
     display: flex;
     .wrapper-Activities {
@@ -285,15 +296,19 @@ export default {
         .cycleIcon {
           width: 60px;
           height: 60px;
-          border: 1px solid red;
+          border: 1px solid $colorOrange;
           border-radius: 50%;
-
+          color: $colorOrange;
             .largeIcon{
               font-size: $fontSize30;
             }
         }
+        h3 {
+          color: $colorWhite;
+        }
         p {
           text-align: center;
+          color: $colorDoveGray;
         }
     }
   }
@@ -302,10 +317,11 @@ export default {
 //SEZIONE REAL WORLD RESULTS
 .container-real-world {
   width: 100%;
-  height: 550px;
+  padding: 100px 0 50px 0;
+  //height: 550px;
 
     .container-small-real-world {
-      height: 100%;
+      //height: 100%;
       width: 80%;
       margin: 0 auto;
       display: flex;
@@ -321,11 +337,24 @@ export default {
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
-            .wrapper-card-tesimonial {
+            .wrapper-card-testimonial {
               display: flex;
               background-color: $backgroundDarkGray;
               width: 480px;
               margin: 10px;
+
+                .wrapper-name{
+                   
+                   p{
+                     color: $colorDoveGray;
+                     font-style: oblique;
+                     line-height: 25px;
+                   }
+                   h4 {
+                     padding-top: 3px;
+                     color: $colorWhite
+                   }
+                }
           }
         }
         
@@ -335,14 +364,22 @@ export default {
 //SEZIONE HIGH PERFORMANCE
 .container-performance {
 width: 100%;
-height: 550px;
+padding: 100px 120px 100px 120px;
+//height: 550px;
     .container-small-performance{
-      height: 100%;
+      //height: 100%;
       width: 80%;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+        .container-small-top {
+
+            h2 {
+              color: $colorWhite;
+            }
+        }
     }
     .wrapper-img-performance {
       display: flex;
@@ -351,8 +388,8 @@ height: 550px;
       flex-wrap: wrap;
       
        .wrapper-card{
-         width: calc(100% / 3 - 20px);
-         margin: 5px 5px 5px 5px;
+         //width: calc(100% / 3 - 20px);
+         margin: 5px 20px 20px 20px;
          height: 155px;
          display: flex;
          justify-content: center;
@@ -437,6 +474,13 @@ height: 550px;
     }
 }
 //FINE
+//CONTAINER GOAL
+.container-goal {
+  width: 100%;
+  height: 200px;
+  background-image: url('./assets/home-parallax.jpg');
+  background-position: 20% 20%;
+}
 .backgroundShark {
     background-color: $backgroundShark;
 }

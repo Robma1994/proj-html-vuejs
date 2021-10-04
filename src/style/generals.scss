@@ -50,6 +50,9 @@
     display: flex;
 }
 //Centrature
+.textC {
+    text-align: center;
+}
 .verticalCentering {
     display: flex;
     align-items: center;
@@ -84,15 +87,15 @@
     margin-bottom: 10px;
 }
 //Padding 
-.paddingTop25 {
-    padding-top: 25px;
+.paddingTop20 {
+    padding-top: 20px;
 }
-.paddingBottom25 {
-    padding-bottom: 25px;
+.paddingBottom20 {
+    padding-bottom: 20px;
 }
-.paddingLeft25{
-    padding-left: 25px;
+.paddingLeft20{
+    padding-left: 20px;
 }
-.paddingRight25 {
-    padding-right: 25px;
+.paddingRight20 {
+    padding-right: 20px;
 }
