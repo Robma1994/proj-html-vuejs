@@ -57,6 +57,112 @@
       </div>
     </div>
 <!-- Fine Activities -->
+<!-- Sezione real world results-->
+    <div class="container-real-world backgroundLightGray">
+      <div class="container-small-real-world">
+        <div class="container-small-top verOriCentering dirCol">
+          <h2 class="marginB10">REAL WORLD RESULTS</h2>
+          <img class="marginB10" src="./assets/divider-xx-red.png" alt="">
+        </div>
+        <div class="wrapper-testimonials">
+          <div class="wrapper-card-tesimonial" v-for="(testim, index) in testimonial" :key="index">
+            <div class="paddingTop25 paddingBottom25 paddingLeft25 paddingRight25">
+              <img class="height110" :src="require(`./assets/compressor-${testim.img}`)" alt="">
+            </div>
+            <div class="paddingBottom25 paddingTop25">
+              <p>{{testim.descrition}}</p>
+              <h4>{{testim.name}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- FINE-->
+<!-- Sezione Performance-->
+    <div class="container-performance backgroundLightGray">
+      <div class="container-small-performance">
+        <div class="container-small-top verOriCentering dirCol">
+          <h2 class="marginB10">HIGH PERFORMANCE FACILITIES</h2>
+          <img class="marginB10" src="./assets/divider-xx-red.png" alt="">
+        </div>
+        <div class="wrapper-img-performance">
+          <div class="wrapper-card" v-for="(img, index) in performance" :key="index">
+            <img :src="require(`./assets/home-${img.immagine}.jpg`)" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- FINE-->
+<!-- Sezione Citazione-->
+    <div class="container-citation">
+      <div class="container-small-citation">
+        <div>
+         <p>"I fear not the man who was has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times"</p>
+        </div>
+        <div>
+          <h3>BRUCE LEE - QUOTE OF THE DAY</h3>
+        </div>
+      </div>
+    </div>
+<!-- FINE-->
+<!-- Sezione trainers -->
+    <div class="container-trainers">
+      <div class="container-small-trainers">
+        <div class="container-s-trainers-top verOriCentering dirCol">
+          <h2 class="marginB10">MEET OUR TRAINERS</h2>
+          <img class="marginB10" src="./assets/divider-xx-red.png" alt="">
+        </div>
+        <div class="container-s-trainers-bottom">
+          <div class="wrapper-card-trainer">
+            <div class="card-trainer backgroundShark" v-for="(train, index) in trainers" :key="index">
+              <img :src="require(`./assets/trainer-${train.img}.jpg`)" alt="">
+              <div>
+                <div>
+                  <h3>{{train.title}}</h3>
+                  <h4>{{train.subTitle}}</h4>
+                </div>
+                <div>
+                  <p>{{train.description}}</p>
+                </div>
+                <div>
+                  <i :class="`fab ${train.facebook}`"></i>
+                  <i :class="`fab ${train.twitter}`"></i>
+                  <i :class="`fab ${train.instagram}`"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button>VIEW ALL TRAINERS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- FINE -->
+<!-- Sezione News -->
+    <div class="container-news">
+      <div class="container-small-news">
+        <div class="container-s-news-top">
+          <h2 class="marginB10">PERFORMANCE NEWS</h2>
+          <img class="marginB10" src="./assets/divider-xx-red.png" alt="">
+        </div>
+        <div class="container-s-news-bottom">
+          <div class="wrapper-card-news">
+            <div class="card-news" v-for="(element,index) in notizie" :key="index">
+              <div class="cont-s-n-bot-top">
+                <img :src="require(`./assets/${element.img}`)" alt="">
+              </div>
+              <div class="cont-s-n-bot-bot">
+                <h3>{{element.title}}</h3>
+                <p>{{element.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- FINE -->
+<!-- FOOTER -->
     <div class="container backgroundShark">
       <div class="container-small wrapper">
         <FooterTop />
@@ -75,6 +181,11 @@ import Header from './components/Header.vue'
 import FooterTop from './components/FooterTop.vue'
 import FooterBottom from './components/FooterBottom.vue'
 import activities from './assets/dati/activities.js'
+import testimonials from './assets/dati/testimonials.js'
+import {immaginiPerfomance} from './assets/dati/performance.js'
+import {dataTrainers} from './assets/dati/trainers.js'
+import {news} from './assets/dati/news.js'
+
 export default {
   name: 'App',
   components: {
@@ -84,7 +195,11 @@ export default {
   },
   data() {
     return {
-      activity: activities
+      activity: activities,
+      testimonial: testimonials,
+      performance: immaginiPerfomance,
+      trainers: dataTrainers,
+      notizie: news
     }
   }
 }
@@ -184,7 +299,144 @@ export default {
   }
 }
 //FINE SEZIONE ACTIVITIES
+//SEZIONE REAL WORLD RESULTS
+.container-real-world {
+  width: 100%;
+  height: 550px;
 
+    .container-small-real-world {
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+        .container-small-top {
+          h2 {
+            color: $colorWhite;
+          }
+        }
+        .wrapper-testimonials{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+            .wrapper-card-tesimonial {
+              display: flex;
+              background-color: $backgroundDarkGray;
+              width: 480px;
+              margin: 10px;
+          }
+        }
+        
+    }
+}
+//FINE
+//SEZIONE HIGH PERFORMANCE
+.container-performance {
+width: 100%;
+height: 550px;
+    .container-small-performance{
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .wrapper-img-performance {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      
+       .wrapper-card{
+         width: calc(100% / 3 - 20px);
+         margin: 5px 5px 5px 5px;
+         height: 155px;
+         display: flex;
+         justify-content: center;
+       }
+    }
+}
+//FINE
+//SEZIONE CITATION
+.container-citation {
+  background-color: lightsalmon;
+  height: 300px;
+  width: 100%;
+    .container-small-citation {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        p {
+          font-size: $fontSize20;
+          color: $colorWhite;
+          text-align: center;
+          padding-bottom: 40px;
+        }
+        h3 {
+          font-size: $fontSize16;
+          color: $colorWhite;
+          text-align: center;
+        }
+    }
+}
+//FINE
+//CONTAINER TRAINERS
+.container-trainers {
+  background-color: $backgroundDarkGray;
+  width: 100%;
+
+    .container-small-trainers {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 50px;
+        .container-s-trainers-bottom {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 50px;
+            .wrapper-card-trainer {
+              display: flex;
+                .card-trainer {
+                height: 310px;
+                margin: 5px 10px 5px 10px
+              }
+            } 
+        }
+    }
+}
+//FINE
+//CONTAINER NEWS 
+.container-news {
+  width: 100%;
+    .container-small-news{
+      width: 80%;
+      margin: 0 auto;
+      .container-s-news-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container-s-news-bottom {
+
+          .wrapper-card-news {
+            display: flex;
+            flex-wrap: wrap;
+
+              .card-news {
+                margin: 10px 10px 10px 10px;
+                width: 200px;
+              }
+          }
+      }
+    }
+}
+//FINE
 .backgroundShark {
     background-color: $backgroundShark;
 }
